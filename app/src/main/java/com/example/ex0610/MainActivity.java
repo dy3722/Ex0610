@@ -1,5 +1,6 @@
 package com.example.ex0610;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +32,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void click(View view) {
-
+        if (sw.isChecked() && tb.isChecked())
+        {
+            main.setBackgroundColor(Color.GREEN);
+        }
+        else if (sw.isChecked() && !tb.isChecked())
+        {
+            main.setBackgroundColor(Color.BLUE);
+        }
+        else if (!sw.isChecked() && tb.isChecked())
+        {
+            main.setBackgroundColor(Color.YELLOW);
+        }
+        else
+        {
+            main.setBackgroundColor(Color.WHITE);
+        }
     }
 }
